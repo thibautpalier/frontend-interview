@@ -41,10 +41,17 @@ To do this, a button should be added on every question.
 
 ### Expectations
 
+We don't recommend spending more than 2 hours on this exercise.
+
 * The feature should be done and be functional
-* The error and loading states of the APIs should be handled (that's why we included delays in the API responses)
+* The error and loading states of the APIs should be handled (that's why we
+  included delays in the API responses)
 * Please take any opportunities to improve the code (refactoring the structure,
-  adding methods for common logic, etc.), we will talk about these during the interview
+  adding methods for common logic, etc.), we will talk about these during the
+  interview
+  * When dealing with this point, if you run out of time, it would be helpful to
+    you to at least have some notes about what you would do, so we can discuss
+    it during the interview
 
 Not required, but helpful:
 * Taste in UI design
