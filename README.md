@@ -19,34 +19,42 @@ To learn more about Next.js, take a look at the following resources:
 
 ## Goal
 
-The goal of the exercise is to add the "share question" feature to the project.
+The goal of the exercise is to add the "share question" feature to the project,
+and to identify and potentially improve the software architecture of this
+project in any other aspect.
+
+### Context
+
 Apiday customers answer reporting campaigns (called questionnaires internally)
-to provide information and follow the regulations.
-Sometimes they don't have the information and instead of inviting a colleague
-on the platform and create a new account, they should be able to send a link
-to colleagues that can then answer.
-This link should be authenticated with a token.
+to provide information to other companies and follow regulations. Sometimes the
+person or people with access to Apiday don't directly have the information, but
+the person who would should not require an account just to answer a couple of
+specific questions. So instead of creating an account for them, we want to
+provide our users with the capacity to send a link to their colleagues, so they
+can then answer only some specific questions. This link should include a token
+to ensure no unauthorized people can modify the answers.
 
 To do this, a button should be added on every question.
-Clicking on this button will copy the link to the dashboard.
-Pasting the link in a new tab should display the chosen question.
+
+* Clicking on this button will copy the link to the clipboard.
+* Pasting the link in a new tab should display only the selected question.
 
 ### Expectations
 
-* The feature should be done
+* The feature should be done and be functional
+* The error and loading states of the APIs should be handled (that's why we included delays in the API responses)
 * Please take any opportunities to improve the code (refactoring the structure,
-  adding methods for common logic, etc.)
-* The error and loading state should be handled
+  adding methods for common logic, etc.), we will talk about these during the interview
 
-Optional:
-* Attention to design
+Not required, but helpful:
+* Taste in UI design
 
 ### Technical details
 
 You can check the [Next.js Documentation](https://nextjs.org/docs) to learn
 more about Next.
 
-The basic thing you should now for this exercise is that the file structure
+The basic thing you should know for this exercise is that the file structure
 inside the `pages` directory is the router. So the `index.tsx` file is the
 `/` page, `/questionnaire/[questionnaireId].tsx` file is the `/questionnaire/:id`
 page and an example to retrieve the parameter is in the file.
