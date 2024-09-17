@@ -1,0 +1,19 @@
+.root {
+    display: flex;
+
+    height: 100vh;
+
+    /* Make sure the Loader takes all the available space */
+    flex-grow: 1;
+    grid-column: 1/-1;
+    grid-row: -1/-2;
+
+    /* Center the loader */
+    align-items: center;
+    justify-content: center;
+}
+
+.loadingIcon {
+    font-size: 2rem;
+    animation: var(--loading-animation);
+}

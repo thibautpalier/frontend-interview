@@ -1,0 +1,111 @@
+:root {
+  /* PRIMARY COLORS */
+  --primary-900: #04094c;
+  --primary-800: #070e72;
+  --primary-700: #0b17be;
+  --primary-600: #2734f2;
+  --primary-500: #5157ff;
+  --primary-400: #7982f7;
+  --primary-300: #a6abfa;
+  --primary-200: #d2d5fc;
+  --primary-100: #e9eafe;
+  --primary-50: #f4f5ff;
+
+  /* BLACK COLORS */
+  --black-900: #191929;
+  --black-800: #32324d;
+  --black-700: #4b4b6a;
+  --black-600: #666687;
+  --black-500: #9a9ab5;
+  --black-400: #c3c3d2;
+  --black-300: #dcdce4;
+  --black-200: #eaeaef;
+  --black-100: #f7f7f8;
+
+  /* DANGER COLORS */
+  --danger-700: #b4200e;
+  --danger-600: #d02b20;
+  --danger-500: #ee5e52;
+  --danger-200: #f5c0b8;
+  --danger-150: #fcdad7;
+  --danger-100: #fcecea;
+
+  /* WARNING COLORS */
+  --warning-800: #593409;
+  --warning-700: #6c3e0b;
+  --warning-600: #c1711a;
+  --warning-500: #f29d41;
+  --warning-200: #fae7b9;
+  --warning-100: #fff5da;
+  --warning-50: #fff6ee;
+
+  /* SUCCESS COLORS */
+  --success-700: #154f27;
+  --success-600: #267e41;
+  --success-500: #5cb176;
+  --success-200: #c6f0c2;
+  --success-150: #d5f5d5;
+  --success-100: #eafbe7;
+
+  /* ALTERNATIVE COLORS */
+  --alternative-700: #073163;
+  --alternative-600: #2475d4;
+  --alternative-500: #489bfd;
+  --alternative-200: #afd3fd;
+  --alternative-100: #e8f1ff;
+
+  /* OTHER COLORS */
+  --white: #fff;
+  --black: #000;
+  --black-95: #111;
+  --background: #fcfcff;
+  --bright-success: #2bd66d;
+
+  /**
+     * SHADOWS
+     * These shadows are adapted from values provided by Figma to better match the designs
+     */
+  --shadow-100: 0 0.125rem 0.25rem -0.0625rem rgb(24 39 75 / 12%),
+    0 0.25rem 0.25rem -0.0625rem rgb(24 39 75 / 8%);
+  --shadow-200: 0 0.375rem 0.5rem -0.125rem rgb(24 39 75 / 12%),
+    0 0.25rem 0.375rem -0.125rem rgb(24 39 75 / 8%);
+  --shadow-300: 0 0.375rem 0.5rem -0.1875rem rgb(24 39 75 / 12%),
+    0 0.5rem 1rem -0.1875rem rgb(24 39 75 / 8%);
+  --shadow-focus: 0 0 0 0.125rem var(--background),
+    0 0 0 0.25rem var(--primary-600);
+
+  /* FONT WEIGHTS */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 600;
+  --weight-extra-bold: 800;
+  --weight-black: 900;
+
+  /* TRANSITION */
+  --transition-specs: 0.15s ease-in-out;
+
+  /* Z-INDEX */
+  --z-index-below-content: -1;
+  --z-index-content: 0;
+  --z-index-above-content: 1;
+  --z-index-close-button: 2;
+  --z-index-header: 3;
+  --z-index-banner: 4;
+  --z-index-backdrop-content: 5;
+
+  /* ANIMATIONS */
+  --loading-animation: rotation 2s infinite linear;
+
+  /* GRADIENT */
+  --gradient-purple-blue: radial-gradient(
+      79.69% 64.83% at 131.16% -26.36%,
+      rgb(52 97 255 / 50%) 0%,
+      rgb(52 97 255 / 0%) 100%
+    ),
+    radial-gradient(
+      229.34% 150.11% at 0% 100%,
+      rgb(158 35 255 / 50%) 0.23%,
+      rgb(81 87 255 / 0%) 100%
+    ),
+    var(--primary-500);
+}

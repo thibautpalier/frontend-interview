@@ -1,0 +1,174 @@
+.button {
+  --button-border: 0.0625rem;
+
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: var(--weight-extra-bold);
+  line-height: 1rem;
+  cursor: pointer;
+  font-family: Madras, sans-serif;
+  letter-spacing: 0.0188rem;
+  transition:
+    background-color var(--transition-specs),
+    color var(--transition-specs),
+    border-color var(--transition-specs);
+  white-space: nowrap;
+}
+
+.linkButton,
+.buttonLike {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+/** ICON */
+
+.button svg {
+  font-size: 1rem;
+}
+
+.button:not(.iconOnly) svg {
+  margin-right: 0.5rem;
+}
+
+.loading {
+  animation: var(--loading-animation);
+}
+
+/** PRIMARY */
+
+.primary,
+.primary:focus {
+  background-color: var(--primary-500);
+  color: var(--white);
+  border: var(--button-border) solid var(--primary-500);
+}
+
+.primary:not(:disabled):hover {
+  background-color: var(--primary-600);
+  border: var(--button-border) solid var(--primary-600);
+}
+
+.primary:not(:disabled):active {
+  background-color: var(--primary-700);
+  border: var(--button-border) solid var(--primary-700);
+}
+
+/** SECONDARY */
+
+.secondary {
+  background-color: var(--white);
+  color: var(--black-900);
+  border: var(--button-border) solid var(--black-200);
+}
+
+.secondary:not(:disabled):hover {
+  background-color: var(--primary-50);
+  border: var(--button-border) solid var(--primary-200);
+  color: var(--primary-500);
+}
+
+.secondary:not(:disabled):active {
+  background-color: var(--primary-100);
+  border: var(--button-border) solid var(--primary-200);
+  color: var(--primary-500);
+}
+
+/** TERTIARY */
+
+.tertiary {
+  color: var(--black-900);
+}
+
+.tertiary:not(:disabled):hover {
+  background-color: var(--black-100);
+}
+
+.tertiary:not(:disabled):active {
+  background-color: var(--black-200);
+}
+
+/* DANGER */
+
+.danger {
+  background-color: var(--danger-100);
+  color: var(--danger-600);
+  border: var(--button-border) solid var(--danger-200);
+}
+
+.danger:not(:disabled):hover {
+  background-color: var(--danger-150);
+}
+
+.danger:not(:disabled):active {
+  background-color: var(--danger-200);
+}
+
+/* SUCCESS */
+
+.success {
+  background-color: var(--success-100);
+  color: var(--success-600);
+  border: var(--button-border) solid var(--success-200);
+}
+
+.success:not(:disabled):hover {
+  background-color: var(--success-150);
+}
+
+.success:not(:disabled):active {
+  background-color: var(--success-200);
+}
+
+/**
+  * SIZES
+  * These calc are due to the fact that figma thinks that borders are inner borders
+  * and don't add width/height to the button. By removing the border to every padding,
+  * it creates these values.
+  */
+.small {
+  padding: calc(0.5rem - var(--button-border)) calc(1rem - var(--button-border));
+}
+
+.medium {
+  padding: calc(0.625rem - var(--button-border))
+    calc(1rem - var(--button-border));
+}
+
+.large {
+  padding: calc(0.75rem - var(--button-border))
+    calc(1rem - var(--button-border));
+}
+
+.small.iconOnly {
+  padding: calc(0.5rem - var(--button-border));
+}
+
+.medium.iconOnly {
+  padding: calc(0.5rem - var(--button-border))
+    calc(0.75rem - var(--button-border));
+}
+
+.large.iconOnly {
+  padding: calc(0.5rem - var(--button-border))
+    calc(0.875rem - var(--button-border));
+}
+
+/* DYNAMIC STATES */
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.button:disabled {
+  background-color: var(--black-200);
+  border: var(--button-border) solid var(--black-300);
+  cursor: not-allowed;
+  color: var(--black-600);
+  transition: none;
+}

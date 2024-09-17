@@ -1,0 +1,85 @@
+.root {
+    --border-width: 0.0625rem;
+
+    display: grid;
+    align-items: flex-start;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: var(--black-800);
+    grid-template-areas:
+        "radio label"
+        "radio children";
+    grid-template-columns: min-content auto;
+}
+
+.root:not(.disabled):hover {
+    background-color: var(--primary-50);
+}
+
+.radio {
+    grid-area: radio;
+    background-color: var(--white);
+    appearance: none;
+    border: var(--border-width) solid var(--black-500);
+    border-radius: 1rem;
+    padding: calc(0.625rem - var(--border-width));
+    margin: 0;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio:not(:only-child) {
+    margin-right: 0.5rem;
+}
+
+.radio:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+}
+
+.radio::before {
+    position: absolute;
+    content: " ";
+    background-color: var(--primary-600);
+    border-radius: 50%;
+    transition: padding var(--transition-specs);
+}
+
+.radio:checked {
+    border-color: var(--primary-600);
+}
+
+.radio:checked::before {
+    padding: 0.375rem;
+}
+
+/* DISABLED STATE */
+
+.disabled,
+.disabled .radio {
+    cursor: not-allowed;
+}
+
+.radio:disabled {
+    background-color: var(--black-200);
+    border-color: var(--black-300);
+}
+
+.radio:checked:disabled {
+    background-color: var(--black-200);
+    border-color: var(--black-300);
+}
+
+/* LABEL */
+
+.textLabel {
+    grid-area: label;
+}
+
+.children:not(:empty) {
+    grid-area: children;
+    margin-top: 0.5rem;
+}

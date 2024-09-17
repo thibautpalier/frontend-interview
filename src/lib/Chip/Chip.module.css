@@ -1,0 +1,37 @@
+.chip {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    display: inline-flex;
+    line-height: 1.25rem;
+    white-space: pre;
+}
+
+.iconChip {
+    composes: chip;
+    padding: 0.5rem;
+}
+
+.grey {
+    background-color: var(--black-100);
+    color: var(--black-800);
+}
+
+.alternative {
+    background-color: var(--alternative-100);
+    color: var(--alternative-700);
+}
+
+.success {
+    background-color: var(--success-100);
+    color: var(--success-700);
+}
+
+.warning {
+    background-color: var(--warning-100);
+    color: var(--warning-700);
+}
+
+.danger {
+    background-color: var(--danger-100);
+    color: var(--danger-700);
+}

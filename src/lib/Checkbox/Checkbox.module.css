@@ -1,0 +1,101 @@
+.root {
+    --checkbox-size: 0.625rem;
+    --ckeckbox-border: 0.0625rem;
+
+    display: grid;
+    grid-template-columns: fit-content(100%);
+}
+
+.checkboxSuperWrapper {
+    display: grid;
+    align-items: flex-start;
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    grid-template-areas:
+        "checkbox label"
+        "checkbox children";
+    grid-template-columns: min-content auto;
+}
+
+.checkboxSuperWrapper:not(.disabledCheckbox):hover {
+    background-color: var(--primary-50);
+}
+
+/* CHECKBOX */
+.checkboxWrapper {
+    display: flex;
+    position: relative;
+    grid-area: checkbox;
+}
+
+.checkbox {
+    background-color: var(--white);
+    appearance: none;
+    border: var(--ckeckbox-border) solid var(--black-500);
+    border-radius: 0.25rem;
+    padding: calc(var(--checkbox-size) - var(--ckeckbox-border));
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+}
+
+.checkbox:checked {
+    background-color: var(--primary-600);
+    border-color: var(--primary-600);
+}
+
+.checkIcon {
+    position: absolute;
+    font-size: var(--checkbox-size);
+    color: white;
+    left: calc(var(--checkbox-size) / 2);
+    top: calc(var(--checkbox-size) / 2);
+    cursor: pointer;
+}
+
+/* DISABLED CHECKBOX */
+.disabledCheckbox,
+.disabledCheckbox .checkbox,
+.disabledCheckbox .checkIcon {
+    cursor: not-allowed;
+}
+
+.checkbox:disabled {
+    background-color: var(--black-200);
+    border-color: var(--black-300);
+}
+
+.checkbox:checked:disabled {
+    background-color: var(--black-200);
+    border-color: var(--black-300);
+}
+
+.checkbox:disabled ~ .checkIcon {
+    color: var(--black-600);
+}
+
+/* LABEL */
+.checkboxSuperWrapper.checkboxWithLabel .checkboxWrapper {
+    margin-right: 0.5rem;
+}
+
+.textLabel {
+    color: var(--black-800);
+    grid-area: label;
+}
+
+.children:not(:empty) {
+    grid-area: children;
+    margin-top: 0.5rem;
+}
+
+.error {
+    margin-top: 0.25rem;
+    color: var(--danger-600);
+}

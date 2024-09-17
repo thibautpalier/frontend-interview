@@ -1,0 +1,54 @@
+.root {
+    --border-width: 0.0625rem;
+    --border-color: var(--black-500);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea {
+    composes: default from global;
+    width: 100%;
+    padding: calc(0.75rem - var(--border-width))
+        calc(1rem - var(--border-width));
+    background-color: var(--white);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 0.25rem;
+    outline: none;
+    color: var(--black-900);
+    font-family: inherit;
+    resize: vertical;
+    min-height: 6rem;
+}
+
+.label ~ .textarea {
+    margin-top: 0.25rem;
+}
+
+.textarea::placeholder {
+    color: var(--black-500);
+}
+
+.textarea:focus {
+    --border-width: 0.125rem;
+    --border-color: var(--primary-500);
+}
+
+.textarea:disabled {
+    background-color: var(--black-200);
+    color: var(--black-600);
+}
+
+.textareaError {
+    --border-color: var(--danger-600);
+}
+
+.description {
+    margin-top: 0.25rem;
+    color: var(--black-600);
+}
+
+.error {
+    margin-top: 0.25rem;
+    color: var(--danger-600);
+}
