@@ -1,0 +1,21 @@
+.root {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  --question-card-padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  padding: var(--question-card-padding);
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-200);
+  gap: 0.5rem;
+}
+
+.status {
+  text-transform: capitalize;
+  place-self: start;
+}
