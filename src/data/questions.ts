@@ -8,7 +8,7 @@ export interface Answer {
 }
 
 export type Question = {
-  id: number;
+  id: string;
   index: number;
   text: string;
   answers: Answer[];
@@ -16,11 +16,11 @@ export type Question = {
   type: QuestionType | null;
 };
 
-export const QUESTIONNAIRE_ID = 5;
+export const QUESTIONNAIRE_ID = "5";
 
 export const questions: Question[] = [
   {
-    id: 1,
+    id: "1",
     index: 1,
     text: "What is your name?",
     status: "UNANSWERED",
@@ -28,7 +28,7 @@ export const questions: Question[] = [
     answers: [{ id: 1, text: "", user_text: "", selected: false }],
   },
   {
-    id: 2,
+    id: "2",
     index: 2,
     text: "Where are you born?",
     status: "UNANSWERED",
@@ -41,7 +41,7 @@ export const questions: Question[] = [
     ],
   },
   {
-    id: 3,
+    id: "3",
     index: 3,
     text: "What fruits do you like?",
     status: "UNANSWERED",
@@ -52,6 +52,17 @@ export const questions: Question[] = [
       { id: 8, text: "Oranges", user_text: "", selected: false },
       { id: 9, text: "Watermelon", user_text: "", selected: false },
       { id: 10, text: "None", user_text: "", selected: false },
+    ],
+  },
+  {
+    id: "4",
+    index: 4,
+    text: "Should Thibault work with us ?",
+    status: "UNANSWERED",
+    type: "SINGLE_SELECT",
+    answers: [
+      { id: 6, text: "Yes", user_text: "", selected: false },
+      { id: 7, text: "Yes", user_text: "", selected: false },
     ],
   },
 ];

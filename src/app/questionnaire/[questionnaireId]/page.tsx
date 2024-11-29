@@ -2,6 +2,8 @@ import { Metadata } from "next";
 
 import Questionnaire from "./components/Questionnaire/Questionnaire";
 
+import styles from "./styles.module.css";
+
 interface QuestionnairePageProps {
   params: { questionnaireId: string };
 }
@@ -15,10 +17,10 @@ const QuestionnairePage = ({
   params: { questionnaireId },
 }: QuestionnairePageProps) => {
   return (
-    <>
+    <div className={styles.root}>
       <h1>Here is the questionnaire content</h1>
       <Questionnaire questionnaireId={questionnaireId} />
-    </>
+    </div>
   );
 };
 

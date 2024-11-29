@@ -10,6 +10,13 @@
   gap: 0.5rem;
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .status {
   text-transform: capitalize;
   place-self: start;

@@ -1,6 +1,8 @@
-import styles from "./page.module.css";
 import { Metadata } from "next";
+
 import QuestionnaireCard from "./components/QuestionnaireCard/QuestionnaireCard";
+
+import styles from "./styles.module.css";
 
 export const metadata: Metadata = {
   title: "Apiday",
@@ -9,12 +11,10 @@ export const metadata: Metadata = {
 
 const HomePage = () => {
   return (
-    <main className={styles.root}>
-      <h1>Welcome to Apiday !</h1>
-
-      <section>Your questionnaires:</section>
+    <div className={styles.root}>
+      <h2>Your questionnaires</h2>
       <QuestionnaireCard />
-    </main>
+    </div>
   );
 };
 

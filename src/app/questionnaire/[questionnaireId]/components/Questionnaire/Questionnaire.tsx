@@ -1,19 +1,19 @@
 "use client";
 
-import styles from "./questionnaire.module.css";
-
-import { useQuestions } from "@/api/questions";
 import { Alert } from "@/lib/Alert";
 import { Loader } from "@/lib/Loader";
+import { useQuestions } from "@/api/questions";
 
-import Question from "../Question/Question";
+import Question from "../../../../components/Question/Question";
+
+import styles from "./styles.module.css";
 
 interface QuestionsProps {
   questionnaireId: string;
 }
 
 const Questionnaire = ({ questionnaireId }: QuestionsProps) => {
-  const { questions, error } = useQuestions(parseInt(questionnaireId));
+  const { questions, error } = useQuestions(questionnaireId);
 
   if (error)
     return (
@@ -27,7 +27,7 @@ const Questionnaire = ({ questionnaireId }: QuestionsProps) => {
   return (
     <div className={styles.root}>
       {questions.map((question) => (
-        <Question question={question} key={question.id} />
+        <Question question={question} key={question.id} shareable />
       ))}
     </div>
   );
