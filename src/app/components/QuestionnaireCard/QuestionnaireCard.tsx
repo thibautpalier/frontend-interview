@@ -1,5 +1,5 @@
-import styles from "./QuestionnaireCard.module.css";
 import { Card } from "@/lib/Card";
+
 import { QUESTIONNAIRE_ID, questions } from "@/data/questions";
 
 const QuestionnaireCard = () => {

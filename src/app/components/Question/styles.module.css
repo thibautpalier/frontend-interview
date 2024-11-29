@@ -1,0 +1,23 @@
+.card {
+  --question-card-padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  padding: var(--question-card-padding);
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-200);
+  gap: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.status {
+  text-transform: capitalize;
+  place-self: start;
+}
